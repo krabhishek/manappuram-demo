@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -26,7 +27,9 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Welcome Page',
+          FFLocalizations.of(context).getText(
+            'qk2edw0i' /* Welcome Page */,
+          ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.white,
@@ -119,7 +122,9 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                                     alignment:
                                         AlignmentDirectional(-0.01, -0.64),
                                     child: Text(
-                                      'Welcome to Personal Loan',
+                                      FFLocalizations.of(context).getText(
+                                        'hjiy2tkc' /* Welcome to Personal Loan */,
+                                      ),
                                       style:
                                           FlutterFlowTheme.of(context).title1,
                                     ),
@@ -142,7 +147,9 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                                     alignment:
                                         AlignmentDirectional(-0.01, -0.64),
                                     child: Text(
-                                      'This is third page',
+                                      FFLocalizations.of(context).getText(
+                                        'ol7phjay' /* This is third page */,
+                                      ),
                                       style:
                                           FlutterFlowTheme.of(context).title1,
                                     ),

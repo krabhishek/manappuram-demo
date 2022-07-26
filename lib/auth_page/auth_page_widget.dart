@@ -6,6 +6,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../welcome_page/welcome_page_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthPageWidget extends StatefulWidget {
@@ -160,7 +161,9 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Welcome',
+          FFLocalizations.of(context).getText(
+            'od3zxm2j' /* Welcome */,
+          ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.white,
@@ -205,10 +208,14 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                               FlutterFlowTheme.of(context).secondaryColor,
                           tabs: [
                             Tab(
-                              text: 'Login',
+                              text: FFLocalizations.of(context).getText(
+                                'a7sxytaa' /* Login */,
+                              ),
                             ),
                             Tab(
-                              text: 'Sign Up',
+                              text: FFLocalizations.of(context).getText(
+                                'x3s7y6ys' /* Sign Up */,
+                              ),
                             ),
                           ],
                         ),
@@ -225,10 +232,16 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                       controller: emailAddressController,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText: 'Email Address',
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          'xe525qz3' /* Email Address */,
+                                        ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
-                                        hintText: 'Enter your email here...',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'w3yzkghq' /* Enter your email here... */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
                                         enabledBorder: OutlineInputBorder(
@@ -274,11 +287,17 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                         controller: passwordController,
                                         obscureText: !passwordVisibility,
                                         decoration: InputDecoration(
-                                          labelText: 'Password',
+                                          labelText: FFLocalizations.of(context)
+                                              .getText(
+                                            'ghzupazx' /* Password */,
+                                          ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyText2,
-                                          hintText: 'Enter your email here...',
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            '339mnnn2' /* Enter your email here... */,
+                                          ),
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyText2,
@@ -339,10 +358,29 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                     children: [
                                       Expanded(
                                         child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
+                                          onPressed: () async {
+                                            final user = await signInWithEmail(
+                                              context,
+                                              emailAddressController!.text,
+                                              passwordController!.text,
+                                            );
+                                            if (user == null) {
+                                              return;
+                                            }
+
+                                            await Navigator.pushAndRemoveUntil(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    WelcomePageWidget(),
+                                              ),
+                                              (r) => false,
+                                            );
                                           },
-                                          text: 'Login',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'dd0rkp11' /* Login */,
+                                          ),
                                           options: FFButtonOptions(
                                             width: 130,
                                             height: 40,
@@ -378,10 +416,16 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                       controller: fullNameController,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText: 'Name',
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          '5duhczen' /* Name */,
+                                        ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
-                                        hintText: 'Please enter your full name',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'd9hq1trr' /* Please enter your full name */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
                                         enabledBorder: OutlineInputBorder(
@@ -426,10 +470,16 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                       controller: signUpEmailAddressController,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText: 'Email Address',
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          'i5rqjjit' /* Email Address */,
+                                        ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
-                                        hintText: 'Enter your email here...',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          '6wtzesa4' /* Enter your email here... */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
                                         enabledBorder: OutlineInputBorder(
@@ -474,10 +524,16 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                       controller: singUpPasswordController,
                                       obscureText: !singUpPasswordVisibility,
                                       decoration: InputDecoration(
-                                        labelText: 'Password',
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          'btrafv9i' /* Password */,
+                                        ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
-                                        hintText: 'Enter your password',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'wmf907nx' /* Enter your password */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
                                         enabledBorder: OutlineInputBorder(
@@ -534,10 +590,16 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                       controller: confirmPasswordController,
                                       obscureText: !confirmPasswordVisibility,
                                       decoration: InputDecoration(
-                                        labelText: 'Confirm Password',
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          '1xke27gy' /* Confirm Password */,
+                                        ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
-                                        hintText: 'Enter your password again',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'r0a7vdgb' /* Enter your password again */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
                                         enabledBorder: OutlineInputBorder(
@@ -644,7 +706,10 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                                 (r) => false,
                                               );
                                             },
-                                            text: 'Sign Up',
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'uqu4dfun' /* Sign Up */,
+                                            ),
                                             options: FFButtonOptions(
                                               width: 130,
                                               height: 40,
