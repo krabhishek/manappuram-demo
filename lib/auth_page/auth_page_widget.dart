@@ -1,6 +1,7 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
+import '../flutter_flow/flutter_flow_language_selector.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -357,52 +358,80 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Expanded(
-                                        child: FFButtonWidget(
-                                          onPressed: () async {
-                                            final user = await signInWithEmail(
-                                              context,
-                                              emailAddressController!.text,
-                                              passwordController!.text,
-                                            );
-                                            if (user == null) {
-                                              return;
-                                            }
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0, 0, 0, 20),
+                                          child: FFButtonWidget(
+                                            onPressed: () async {
+                                              final user =
+                                                  await signInWithEmail(
+                                                context,
+                                                emailAddressController!.text,
+                                                passwordController!.text,
+                                              );
+                                              if (user == null) {
+                                                return;
+                                              }
 
-                                            await Navigator.pushAndRemoveUntil(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    WelcomePageWidget(),
-                                              ),
-                                              (r) => false,
-                                            );
-                                          },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'dd0rkp11' /* Login */,
-                                          ),
-                                          options: FFButtonOptions(
-                                            width: 130,
-                                            height: 40,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .subtitle2
-                                                    .override(
-                                                      fontFamily: 'Poppins',
-                                                      color: Colors.white,
-                                                    ),
-                                            borderSide: BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1,
+                                              await Navigator
+                                                  .pushAndRemoveUntil(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      WelcomePageWidget(),
+                                                ),
+                                                (r) => false,
+                                              );
+                                            },
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'dd0rkp11' /* Login */,
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
+                                            options: FFButtonOptions(
+                                              width: 130,
+                                              height: 40,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .subtitle2
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.white,
+                                                      ),
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ],
+                                  ),
+                                  FlutterFlowLanguageSelector(
+                                    width: 200,
+                                    backgroundColor: Colors.black,
+                                    borderColor: Color(0xFF262D34),
+                                    dropdownIconColor: Color(0xFF14181B),
+                                    borderRadius: 8,
+                                    textStyle: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 13,
+                                    ),
+                                    hideFlags: false,
+                                    flagSize: 24,
+                                    flagTextGap: 8,
+                                    currentLanguage: FFLocalizations.of(context)
+                                        .languageCode,
+                                    languages: FFLocalizations.languages(),
+                                    onChanged: (lang) =>
+                                        setAppLanguage(context, lang),
                                   ),
                                 ],
                               ),
