@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "1025602414763",
+    "project_id": "ff-enterprise-demos",
+    "storage_bucket": "ff-enterprise-demos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025602414763:android:00d4782cc3d79307656fee",
+        "android_client_info": {
+          "package_name": "com.manappuram.devtrainingproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025602414763-j1n4jvbr1b1g9rp9aq1jec36salf2rbq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.manappuram.devtrainingproject",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "1025602414763-i8hnqntlaob0hqnt2uqnc1rkcfbrq4k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_5eY1eFqHQq_XBhyF74DnGUqYEu8oBp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025602414763-i8hnqntlaob0hqnt2uqnc1rkcfbrq4k8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1025602414763-hpv91uogsb1ird875dnosn7ib08jhka6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.manappuram.devtrainingproject"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025602414763:android:2072425a7cb02f9e656fee",
+        "android_client_info": {
+          "package_name": "io.flutterflow.superappdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025602414763-bc8renejcpbgqs413t4ulvccm0f64ppv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.flutterflow.superappdemo",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "1025602414763-i8hnqntlaob0hqnt2uqnc1rkcfbrq4k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_5eY1eFqHQq_XBhyF74DnGUqYEu8oBp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025602414763-i8hnqntlaob0hqnt2uqnc1rkcfbrq4k8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1025602414763-hpv91uogsb1ird875dnosn7ib08jhka6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.manappuram.devtrainingproject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
